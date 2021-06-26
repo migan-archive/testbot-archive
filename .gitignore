@@ -1,0 +1,9 @@
+# token
+token.txt
+
+# ide seting
+.vscode
+.idea
+
+# build
+__pycache__
