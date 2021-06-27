@@ -1,8 +1,7 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const {prefix, token} = require('./config.json');
+const {prefix, token} = require('./config.json'); // 접두사와 토큰을 config.json 파일에서 가져온다
 const fs = require('fs');
-const Embed = new Discord.MessageEmbed();
 
 
 client.commands = new Discord.Collection();
@@ -13,7 +12,7 @@ for(const file of commandFiles){
     client.commands.set(command.name,command);
 }
 client.on('ready', () => {
-	console.log(`Logged in as ${client.user.tag}!`);
+	console.log(`${client.user.tag}(으)로 봇에 로그인 하셨습니다.`);
 });
 
 

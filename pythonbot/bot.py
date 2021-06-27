@@ -4,6 +4,7 @@ from itertools import cycle
 from discord.ext.commands import CommandNotFound
 
 
+# 토큰을 token.txt 에서 읽고 가져오기
 token_path = os.path.dirname( os.path.abspath( __file__ ) )+"/token.txt"
 t = open(token_path, "r", encoding="utf-8")
 token = t.read().split()[0]
@@ -20,6 +21,7 @@ async def on_command_error(ctx, error):
         return
     raise error
 
+# cogs 폴더안에 있는 파일의 확장자가 .py일때 cogs로 로드하고 로드완료 메세지 출력
 for file in os.listdir("cogs"):
     if file.endswith(".py"):
         bot.load_extension(f"cogs.{file[:-3]}")
@@ -37,5 +39,5 @@ async def change_status():
     await bot.change_presence(activity=discord.Game(next(status)))
 
 
+# 그리고 위에서 가져온 토큰을 로그인 할때 사용.
 bot.run(token)
-
