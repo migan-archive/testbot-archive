@@ -5,7 +5,7 @@ const fs = require('fs');
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const Dokdo = require('dokdo');
-const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok'], prefix: '!' });
+const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok', '테스트', 'eval', '독도', 'test'], prefix: '!' });
 
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
@@ -39,4 +39,4 @@ client.on('message', async message => {
 })
 
 
-client.login(token)
+client.login(token) // process.env.TOKEN
