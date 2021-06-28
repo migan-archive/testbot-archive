@@ -12,7 +12,11 @@ for(const file of commandFiles){
     client.commands.set(command.name,command);
 }
 client.on('ready', () => {
-	console.log(`${client.user.tag}(으)로 봇에 로그인 하셨습니다.`);
+    console.log("--------------------------------------")
+	console.log(`${client.user.tag}으로 로그인 하셨습니다.`);
+    console.log("Licence = MIT");
+    console.log("봇 원작자 = 미간#8269");
+    console.log("--------------------------------------")
 });
 
 
@@ -20,6 +24,7 @@ client.on('message',msg=>{
     if(!msg.content.startsWith(prefix) || msg.author.bot) return;
     const args = msg.content.slice(prefix.length).trim().split(/ +/);
     const commandName = args.shift();
+    if(!client.commands.has(commandName)) return;
     const command = client.commands.get(commandName);
     try{
         command.execute(msg,args);
