@@ -9,7 +9,6 @@
     "dependencies": {
         "discord.js": "^12.5.3",
         "dokdo": "^0.3.0",
-        "koreanbots": "^2.0.12",
-        "parse-ms": "^3.0.0"
+        "koreanbots": "^2.0.12"
     }
 }
