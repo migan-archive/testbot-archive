@@ -1,11 +1,12 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const {prefix, token} = require('./config.json'); // 접두사와 토큰을 config.json 파일에서 가져온다
+const {token} = require('./config.json'); // 접두사와 토큰을 config.json 파일에서 가져온다
 const fs = require('fs');
 client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 const Dokdo = require('dokdo');
 const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok', '테스트', 'eval', '독도', 'test'], prefix: '!' });
+prefix = "--";
 
 for(const file of commandFiles){
     const command = require(`./commands/${file}`);
