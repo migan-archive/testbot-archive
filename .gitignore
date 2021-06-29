@@ -12,8 +12,8 @@ __pycache__
 # node.js module
 node_modules
 
-#node.js package
+# node.js package
 package-lock.json
 
-#임시
-commands
+# test
+test.js
