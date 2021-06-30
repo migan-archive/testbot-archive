@@ -1,6 +1,6 @@
 module.exports = {
     name: "서버수",
-    execute(message){
+    execute(message) {
         const Discord = require('discord.js');
         const client = new Discord.Client();
         const Embed = new Discord.MessageEmbed()

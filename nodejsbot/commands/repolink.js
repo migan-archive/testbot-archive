@@ -1,6 +1,6 @@
 module.exports = {
     name: "소스코드",
-    execute(message){
+    execute(message) {
         const Discord = require('discord.js');
         const Embed = new Discord.MessageEmbed()
             .setTitle("소스코드")
