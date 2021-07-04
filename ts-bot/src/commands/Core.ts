@@ -1,5 +1,6 @@
 import { command, Module, rest } from "@pikostudio/command.ts";
-import { DiscordAPIError, Message, MessageEmbed } from "discord.js";
+import { Message, MessageEmbed } from "discord.js";
+import discordButtons from "discord-buttons";
 
 class Core extends Module {
     constructor() {
