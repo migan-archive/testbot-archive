@@ -1,23 +1,15 @@
-import * as express from "express";
+const Discord = require('discord.js');
+const client = new Discord.Client();
+const config = require('./config.json');
 
-
-class App {
-    public application : express.Application;
-
-    
-    constructor(){
-        this.application = express();
+client.on('ready', () => {
+    console.log(`${client.user.tag}에 로그인하였습니다!`);
+  });
+  
+  client.on('message', msg => {
+    if (msg.content === '핑') {
+      msg.reply('퐁!');
     }
-
-
-}
-
-
-const app = new App().application;
-
-app.get("/",(req : express.Request , res : express.Response) =>{
-    res.send("start");
-})
-
-
-app.listen(4000,()=>console.log("start"));
+  });
+  
+  client.login(config.token);
