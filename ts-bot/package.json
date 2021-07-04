@@ -1,0 +1,16 @@
+{
+  "name": "ts-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "dev": "ts-node src",
+    "start": "node dist"
+  },
+  "dependencies": {
+    "@pikostudio/command.ts": "^2.0.13",
+    "discord.js": "^12.5.3",
+    "dokdo": "^0.3.1"
+  }
+}
