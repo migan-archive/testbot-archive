@@ -4,13 +4,13 @@ import path from "path";
 const config = require('../config.json')
 
 const client = new CommandClient({}, {
-    owners: 'auto',
-    prefix: config.prefix
-})
+  owners: config.owners,
+  prefix: config.prefix
+});
 
 
 fs.readdirSync(path.join(__dirname, 'commands')).forEach(x => {
-    client.registry.loadModule(path.join(__dirname, 'commands', x));
+  client.registry.loadModule(path.join(__dirname, 'commands', x));
 });
 
 client.on('ready', () => {
