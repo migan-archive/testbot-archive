@@ -1,9 +1,9 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const config = require('./config.json'); // 토큰을 config.json 파일에서 가져온다
-const Dokdo = require('dokdo');
+// const Dokdo = require('dokdo');
 const fs = require('fs');
-const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok'], prefix: '!', owners: '415135882006495242' }); // 여기있는 prefix는 dokdo 커맨드 전용 접두사입니다.
+// const DokdoHandler = new Dokdo(client, { aliases: ['dokdo', 'dok'], prefix: '!', owners: '415135882006495242' }); // 여기있는 prefix는 dokdo 커맨드 전용 접두사입니다.
 const prefix = "="; // 여기에 봇 접두사를 넣으면 됩니다.
 
 client.commands = new Discord.Collection()
@@ -43,9 +43,9 @@ client.on('message', msg => {
 })
 
 
-client.on('message', async message => {
-  if (message.content);
-  DokdoHandler.run(message);
-})
+// client.on('message', async message => {
+//   if (message.content);
+//   DokdoHandler.run(message);
+// })
 
 client.login(config.token); // process.env.TOKEN (Heroku 로 돌릴시)
