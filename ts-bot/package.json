@@ -9,9 +9,6 @@
     "start": "node dist"
   },
   "dependencies": {
-    "@pikostudio/command.ts": "^2.0.13",
-    "discord-buttons": "^4.0.0",
-    "discord.js": "^12.5.3",
-    "dokdo": "^0.3.1"
+    "discord.js": "https://github.com/discordjs/discord.js#master"
   }
 }
